@@ -7,8 +7,16 @@ public class TurnManager : MonoBehaviour
 
 	/*
 		Controls progression of the game.
-		Emits events e.g. 'player turn ended'. 
+		Emits events e.g. 'player turn ended'.
 	*/
+
+	public enum State {
+		Menu,
+		PlayerTurn, 
+		EnemyTurn
+	}
+
+	public State state = State.Menu;
 
 	int turnNumber = 0;
 

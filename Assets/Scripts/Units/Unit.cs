@@ -6,6 +6,12 @@ public class Unit : MonoBehaviour
 {
 
 	public bool awaitsPlayerInput = false;
+	bool hasActedThisTurn = false;
+
+    [SerializeField] List<Action> actions;
+
+	[SerializeField] int hpMax = 1;
+	[SerializeField] int hp;
 
 
 	public Tile.TileProperties canBePlacedOn;	// Valid tiles when placing this unit.
@@ -18,12 +24,18 @@ public class Unit : MonoBehaviour
         
     }
 
+	public void AddedToBoard() {
+
+		hp = hpMax;
+		hasActedThisTurn = false;
+		
+	}
+
     // Update is called once per frame
     void Update()
     {
         
     }
-
 
 
 

@@ -8,9 +8,10 @@ public class CloudGrid : MonoBehaviour
 	/*
 		Clouds move and extend off the board so the player can see what cloudcover is coming.
 		Clouds use noise for generation and use the turn number + (level number * 100) for their 0,0.
+		Size is size of the board + margin
 	*/
 
-
+	[SerializeField] int margin = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -23,5 +24,11 @@ public class CloudGrid : MonoBehaviour
     {
         
     }
+
+
+	//Initial generation when a map is loaded 
+	public void Generate() {
+
+	}
 
 }

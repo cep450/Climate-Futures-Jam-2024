@@ -5,7 +5,7 @@ using UnityEngine;
 public class WorldTile : MonoBehaviour
 {
 	/*
-		Visual representation of a tile object.
+		Visual representation of a tile object in the world.
 	*/
 
 	//positions for different parts/layers
