@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Unit : MonoBehaviour
+public class Unit : MonoBehaviour, ITurnTaker
 {
-
-	public bool awaitsPlayerInput = false;
-	bool hasActedThisTurn = false;
 
     [SerializeField] List<Action> actions;
 
@@ -18,6 +15,10 @@ public class Unit : MonoBehaviour
 	public Tile.TileProperties canStandOn; 		// Tiles this unit can end a turn on, tiles considered valid to end a move on.
 	public Tile.TileProperties canPassThrough;  // Tiles considered valid when moving.
 
+	public bool hasMovedThisTurn = false;
+	[SerializeField] int actionsPerTurn = 1;
+	public int actionsRemaining;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,6 @@ public class Unit : MonoBehaviour
 	public void AddedToBoard() {
 
 		hp = hpMax;
-		hasActedThisTurn = false;
 		
 	}
 
@@ -39,13 +39,39 @@ public class Unit : MonoBehaviour
 
 
 
-    // What this unit will do every turn.
-	public void AutomousTurn() {
+	public void ApplyDamage(int dmg) {
+
+		hp = hp - dmg; 
+
+		//TODO display any visual effects if needed 
+
+		if(hp <= 0) {
+			Die();
+		}
+	}
+
+	public void Die() {
+
+		//TODO 
+		//any effect or animation we're playing 
+		// remove the unit 
+		// create scrap on the board where the unit was 
+	}
+
+	public void BeginTurn() {
+		hasMovedThisTurn = false;
+		actionsRemaining = actionsPerTurn;
+	}
+
+	public void TakeTurn() {
+		
+	}
+
+	public void EndTurn() {
 
 	}
 
-	// Present the player with options about this unit.
-	public void AwaitPlayerInput() {
-
+	public bool HasActionsRemaining() {
+		return (!hasMovedThisTurn || actionsRemaining > 0);
 	}
 }

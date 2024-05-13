@@ -11,6 +11,10 @@ public class Board : MonoBehaviour
 
 	[SerializeField] Grid<Tile> tiles;
 
+	// Ordered lists of player and enemy units, in order that they will take their turns 
+	public List<Ally> playerUnits { get; private set; }
+	public List<Enemy> enemyUnits { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {

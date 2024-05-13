@@ -39,6 +39,8 @@ public class TurnManager : MonoBehaviour
 	public delegate void OnEndEnemyTurn();
 	public static event OnEndPlayerTurn onEndEnemyTurn;
 
+	[SerializeField] Board board;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +52,11 @@ public class TurnManager : MonoBehaviour
     {
         
     }
+
+    // Find references to everything we need
+	public void LoadNewLevel() {
+		
+	}
 
 	// begin the first turn 
 	public void BeginLevel() {
@@ -67,10 +74,20 @@ public class TurnManager : MonoBehaviour
 	}
 
 	void BeginEnemyTurn() {
-
+		
 	}
 
 	void EndEnemyTurn() {
 
 	}
+
+	// Coroutine managing the enemy's turn. Includes waiting for movement, animations, ect.
+	IEnumerator EnemyTurn() {
+
+		foreach(Enemy enemy in board.enemyUnits) {
+			//TODO 
+			yield return null;
+		}
+	}
+
 }

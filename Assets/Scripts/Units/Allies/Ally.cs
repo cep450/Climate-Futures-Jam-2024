@@ -30,5 +30,13 @@ public class Ally : Unit
 
 	}
 
+	public void BeginTurn() {
+
+		// calculate how much energy produced 
+		// update our amount of energy 
+		// make available for player to act 
+		
+	}
+
 
 }
