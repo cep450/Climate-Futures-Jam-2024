@@ -12,6 +12,8 @@ public class WorldTile : MonoBehaviour
 	[SerializeField] GameObject land, unit, smog, cloud;
 
 	public float heightOffset = 0;
+	public Vector3 rotation = Vector3.zero;
+	public bool clouds = false;
 
 
     

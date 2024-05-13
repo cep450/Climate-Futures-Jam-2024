@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,13 +13,22 @@ public class TurnManager : MonoBehaviour
 
 	public enum State {
 		Menu,
+		Dialogue,
 		PlayerTurn, 
 		EnemyTurn
 	}
 
+
+
 	public State state = State.Menu;
 
 	int turnNumber = 0;
+
+	[SerializeField] TimeOfDay[] timeOfDayCycle;
+
+	public TimeOfDay GetTimeOfDay() {
+		return timeOfDayCycle[(int)Mathf.Repeat(turnNumber, timeOfDayCycle.Length)];
+	}
 
 	public delegate void OnBeginPlayerTurn();
 	public static event OnBeginPlayerTurn onBeginPlayerTurn;
@@ -40,6 +50,13 @@ public class TurnManager : MonoBehaviour
     {
         
     }
+
+	// begin the first turn 
+	public void BeginLevel() {
+
+
+		// begin at dawn- muted colors 
+	}
 
 	void BeginPlayerTurn() {
 
