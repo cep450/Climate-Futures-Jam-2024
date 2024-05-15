@@ -3,38 +3,42 @@ using PixelCrushers.DialogueSystem;
 
 public class DialogueManager : MonoBehaviour
 {
-    private QuestState _tutorialQuest;
-    QuestCondition _condition;
-    [SerializeField] private DialogueDatabase _gameDatabase;
-    private Variable _canStartTutorialDialogue;
+    [SerializeField] private GameObject _dialogueTrigger;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        //_canStartTutorialDialogue = _gameDatabase.GetVariable("IsTutorialDialogueActive");
         DialogueLua.SetVariable("IsTutorialDialogueActive", false);
-        //_tutorialQuest.
-        
-        
+        _dialogueTrigger.SetActive(false);
+
     }
 
-    static public void OnConversationStart()
+    /// <summary>
+    /// Handle by the Dialogue System Events
+    /// </summary>
+    public void OnConversationStart()
     {
+        // Some Stuff
 
     }
-    static public void OnConversationEnd()
+
+    /// <summary>
+    /// Handle by the Dialogue System Events
+    /// </summary>
+    public void OnConversationEnd()
     {
-
+        // Some Stuff
     }
-    static public void StartQuest()
+
+    // Rough way. Improvement : Could be handle for the dialogue system
+    public void OnConversationSkip()
     {
-
+        _dialogueTrigger.SetActive(false);
     }
-    static public void StartTutorialDialogue()
+
+    public void StartTutorialDialogue()
     {
         DialogueLua.SetVariable("IsTutorialDialogueActive", true);
         Debug.Log("ISTut " +  DialogueLua.GetVariable("IsTutorialDialogueActive").asBool);
-        //var o = new object();
-        //o.GetType();
+        _dialogueTrigger.SetActive(true);
     }
 }
