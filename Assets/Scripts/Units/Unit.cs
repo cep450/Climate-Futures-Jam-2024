@@ -19,6 +19,8 @@ public class Unit : MonoBehaviour, ITurnTaker
 	[SerializeField] int actionsPerTurn = 1;
 	public int actionsRemaining;
 
+	VisualUnit visualUnit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,7 +66,7 @@ public class Unit : MonoBehaviour, ITurnTaker
 	}
 
 	public void TakeTurn() {
-		
+
 	}
 
 	public void EndTurn() {

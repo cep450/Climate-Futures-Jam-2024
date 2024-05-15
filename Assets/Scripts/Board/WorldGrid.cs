@@ -12,10 +12,12 @@ public class WorldGrid : MonoBehaviour
 	public float tileSize;
 	public int diameter;
 
+	public Grid<Tile> tiles;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        UpdateTilePositions();
     }
 
     // Update is called once per frame
@@ -23,4 +25,18 @@ public class WorldGrid : MonoBehaviour
     {
         
     }
+
+	[ContextMenu("Update Tile Positions")]
+    void UpdateTilePositions()
+    {
+        //TODO
+		//for(int i = 0; i < tiles.)
+		//loop through and update the position by multiplying the i,j by the world units space the tile will take up
+		// and update the height as given by the tile 
+
+		//TODO we'll want something similar for clouds. should this function go in the Grid class?
+		//UpdateCloudPositions
+		//and put this in Start() as well
+    }
+
 }

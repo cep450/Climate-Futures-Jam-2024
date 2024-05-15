@@ -2,29 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Grid<T> : MonoBehaviour
 {
 
-	/*
-		2d grid of <Type> (e.g. tile, unit, cloud, smog)
-		abstract representation in memory
-		with utility functions 
-	*/
+	// 2d array plus helper functions wrapper 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
-
-
+	[SerializeField] T [][] grid;
 
 }
