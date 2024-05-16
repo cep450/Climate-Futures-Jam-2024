@@ -38,7 +38,7 @@ public class DialogueManager : MonoBehaviour
     public void StartTutorialDialogue()
     {
         DialogueLua.SetVariable("IsTutorialDialogueActive", true);
-        Debug.Log("ISTut " +  DialogueLua.GetVariable("IsTutorialDialogueActive").asBool);
+        //Debug.Log("ISTut " +  DialogueLua.GetVariable("IsTutorialDialogueActive").asBool);
         _dialogueTrigger.SetActive(true);
     }
 }

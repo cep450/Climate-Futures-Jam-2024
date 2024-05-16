@@ -3,9 +3,14 @@ using UnityEngine.UI;
 
 public class MainMenuUI : MonoBehaviour
 {
+    [SerializeField] private Button _startButton;
     [SerializeField] private Button _quitButton;
     void Awake()
     {
+        _startButton.onClick.AddListener(() =>
+        {
+            Loader.Load(Loader.Scene.GameScene);
+        });
         _quitButton.onClick.AddListener(() =>
         {
             Application.Quit();
@@ -14,6 +19,4 @@ public class MainMenuUI : MonoBehaviour
 #endif
         });
     }
-
-    
 }
