@@ -19,6 +19,8 @@ public class Tile : MonoBehaviour
 		public bool geothermal;
 	}
 
+	public Vector2Int gridPosition;
+
 	Unit unit = null;
 
 	public float smog = 0f; 

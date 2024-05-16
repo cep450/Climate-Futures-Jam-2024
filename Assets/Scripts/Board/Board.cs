@@ -9,7 +9,8 @@ public class Board : MonoBehaviour
 		The collection of tiles that make up the whole game board.
 	*/
 
-	[SerializeField] Grid<Tile> tiles;
+	[SerializeField] WorldGrid<Tile> tiles;
+	[SerializeField] CloudGrid clouds;
 
 	// Ordered lists of player and enemy units, in order that they will take their turns 
 	public List<Ally> playerUnits { get; private set; }
