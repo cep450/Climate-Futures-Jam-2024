@@ -15,6 +15,8 @@ public class WorldTile : MonoBehaviour
 	public Vector3 rotation = Vector3.zero;
 	public bool clouds = false;
 
+	public Tile tile;
+
 
     
 	// Start is called before the first frame update
@@ -36,5 +38,7 @@ public class WorldTile : MonoBehaviour
 	public void UpdateSmog(float newSmog) {
 
 	}
+
+	
 
 }

@@ -76,4 +76,6 @@ public class Unit : MonoBehaviour, ITurnTaker
 	public bool HasActionsRemaining() {
 		return (!hasMovedThisTurn || actionsRemaining > 0);
 	}
+
+	
 }

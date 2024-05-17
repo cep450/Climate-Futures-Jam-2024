@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VisualUnit : MonoBehaviour
+public class TileClickZone : MonoBehaviour
 {
+	/*
+		Handles this tile being moused over and clicked on.
+		Has a collider that captures mouse raycasts.
+	*/
 
-	// As displayed in the world.
-
-	[SerializeField] GameObject attackVFX;
-
-    // Start is called before the first frame update
+	// Start is called before the first frame update
     void Start()
     {
         
@@ -20,11 +20,6 @@ public class VisualUnit : MonoBehaviour
     {
         
     }
-
-	public void DisplayAttackVFX(Vector3 position) {
-		//TODO
-	}
-
 
 	void OnMouseEnter() {
 
@@ -37,5 +32,7 @@ public class VisualUnit : MonoBehaviour
 	void OnMouseExit() {
 		
 	}
+
 	
+
 }
