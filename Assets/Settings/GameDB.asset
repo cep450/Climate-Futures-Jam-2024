@@ -46,7 +46,7 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: Amad
+      value: Player
       type: 0
       typeString: CustomFieldType_Text
     - title: IsPlayer
@@ -58,7 +58,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Name
-      value: Player
+      value: Amad
       type: 0
       typeString: 
     portrait: {fileID: 2800000, guid: deadb9834e16827408a99dff6bed0a88, type: 3}
