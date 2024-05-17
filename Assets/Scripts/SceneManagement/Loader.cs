@@ -37,13 +37,9 @@ public static class Loader
 
         while ( _loadingAsyncOperation.progress <= 0.9f && LoadingUI.CurrentTimer <= LoadingUI.MinTimeToLoad || (_loadingAsyncOperation.isDone && LoadingUI.CurrentTimer <= LoadingUI.MinTimeToLoad))
         {
-            //Debug.Log("Timer " + LoadingUI.CurrentTimer);
-            //Debug.Log("Loading " + _loadingAsyncOperation.progress);
-
             LoadingUI.CurrentTimer += Time.deltaTime;
             yield return null;
         }
-        //Debug.Log("Loading " + _loadingAsyncOperation.progress);
         _loadingAsyncOperation.allowSceneActivation = true;
         yield return null;
 

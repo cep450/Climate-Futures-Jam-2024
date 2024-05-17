@@ -28,12 +28,7 @@ public class LoadingUI : MonoBehaviour
     }
     private void Update()
     {
-        //_progressBarImage.fillAmount = Loader.GetLoadingProgress()/ 1;
         _progress = Loader.GetLoadingProgress();
-        //_progressBarImage.fillAmount = Mathf.MoveTowards(_progressBarImage.fillAmount, _progress, progressUpdateSpeed * Time.deltaTime);
-        //if (_progress >= 0.9f)
-        //    _progressBarImage.fillAmount = 1f;
-        //else
-            _progressBarImage.fillAmount = Mathf.Lerp(_progressBarImage.fillAmount, _progress, progressUpdateSpeed * Time.deltaTime);
+        _progressBarImage.fillAmount = Mathf.Lerp(_progressBarImage.fillAmount, _progress, progressUpdateSpeed * Time.deltaTime);
     }
 }
