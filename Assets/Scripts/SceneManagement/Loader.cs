@@ -2,11 +2,12 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public static class Loader
 {
     private class LoadingMonoBehaviour : MonoBehaviour { }
-
+    static Scene _targetScene;
     public enum Scene
     {
         MainMenuScene,
@@ -14,21 +15,35 @@ public static class Loader
         LoadingScene,
     }
 
-    private static Action onLoaderCallback;
+    private static Action<Scene> onLoaderCallback;
     private static AsyncOperation _loadingAsyncOperation;
-
+     
     public static void Load(Scene targetScene)
     {
-        onLoaderCallback = () =>
+        _targetScene = targetScene;
+        onLoaderCallback = (targetScene) =>
         {
             GameObject loadingMonoBehaviour = new GameObject("Loading Game Object");
             loadingMonoBehaviour.AddComponent<LoadingMonoBehaviour>().StartCoroutine(LoadSceneAsync(targetScene));
         };
-       
-        SceneManager.LoadScene(Scene.LoadingScene.ToString());
+
+    SceneManager.LoadScene(Scene.LoadingScene.ToString());
     }
 
-    private static IEnumerator LoadSceneAsync(Scene scene)
+    //private static Action LoadingDelagate(Scene targetScene)
+    //{
+    //    throw new NotImplementedException();
+    //}
+
+    delegate void LoadingDelagate(Scene targetScene);
+    //private static LoadingDelagate Loading;
+    private static void Loading(Scene targetScene)
+    {
+        GameObject loadingMonoBehaviour = new GameObject("Loading Game Object");
+    loadingMonoBehaviour.AddComponent<LoadingMonoBehaviour>().StartCoroutine(LoadSceneAsync(targetScene));
+    }
+
+private static IEnumerator LoadSceneAsync(Scene scene)
     {
         yield return null;
         _loadingAsyncOperation = SceneManager.LoadSceneAsync(scene.ToString());
@@ -62,7 +77,7 @@ public static class Loader
     {
         if (onLoaderCallback != null)
         {
-            onLoaderCallback();
+            onLoaderCallback(_targetScene);
             onLoaderCallback = null;
         }
     }
