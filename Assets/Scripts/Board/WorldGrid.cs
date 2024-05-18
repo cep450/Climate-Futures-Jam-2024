@@ -36,6 +36,9 @@ public class WorldGrid<T> : MonoBehaviour
     }
 
 	// get adjacencies of a tile, returns null if off-grid (really default(T) which will usually be null)
+	public T GetTile(Vector2Int pos) {
+		return GetTile(pos.x, pos.y, 0, 0);
+	}
 	public T GetTile(Vector2Int pos, int offsetX, int offsetY) {
 		return GetTile(pos.x, pos.y, offsetX, offsetY);
 	}
@@ -51,16 +54,22 @@ public class WorldGrid<T> : MonoBehaviour
 	public T GetBehind(int x, int y) {
 		return GetTile(x, y, 0, 1);
 	}
+	public T GetTile(int posX, int posY) {
+		return GetTileInternal(posX, posY);
+	}
 	public T GetTile(int posX, int posY, int offsetX, int offsetY) {
-
 		int x = posX + offsetX;
 		int y = posY + offsetY;
+		return GetTileInternal(x, y);
+	}
 
+	// if we need custom implementation or transformations on what index we're getting 
+	protected virtual T GetTileInternal(int x, int y) {
+		
 		if(x < 0 || y < 0 || x >= grid[0].Length || y >= grid.Length) {
 			return default(T);
 		} else {
 			return grid[x][y];
 		}
 	}
-
 }

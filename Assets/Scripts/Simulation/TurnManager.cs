@@ -84,10 +84,18 @@ public class TurnManager : MonoBehaviour
 	// Coroutine managing the enemy's turn. Includes waiting for movement, animations, ect.
 	IEnumerator EnemyTurn() {
 
-		foreach(Enemy enemy in board.enemyUnits) {
-			//TODO 
-			yield return null;
-		}
+		//iterate through the ordered list 
+		//TODO 
+		yield return null;
+
+	}
+
+	// Beginning of player's turn. 
+	// Reset the player's unit's actions.
+	IEnumerator PlayerTurnStart() {
+
+		//TODO 
+		yield return null;
 	}
 
 }

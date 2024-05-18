@@ -19,12 +19,18 @@ public class Tile : MonoBehaviour
 		public bool geothermal;
 	}
 
+	public Board board; // store a reference to the board we're on
+
 	public Vector2Int gridPosition;
 
 	Unit unit = null;
 
 	public float smog = 0f; 
 	public float sunlight= 1f;
+
+	public bool GetCloudCover() {
+		return board.clouds.GetTile(gridPosition).activeSelf;
+	}
 
 
     
@@ -40,6 +46,6 @@ public class Tile : MonoBehaviour
         
     }
 
-	
+
 
 }

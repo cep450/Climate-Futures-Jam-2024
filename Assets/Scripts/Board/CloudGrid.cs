@@ -36,4 +36,11 @@ public class CloudGrid : WorldGrid<GameObject>
 
 	}
 
+	// transform coordinates when getting tiles so that the "grid" is within the margins 
+	protected override GameObject GetTileInternal(int x, int y) {
+		x += margin; 
+		y += margin; 
+		return base.GetTileInternal(x, y);
+	}
+
 }
