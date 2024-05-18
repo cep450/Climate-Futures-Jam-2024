@@ -3031,8 +3031,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Lorem Ipsum\n\r\n\nLorem Ipsum\n\n\n\n\xA9 Copyright 2024 Lorem Ipsum
-    \n"
+  m_text: "FORTUNES LAST FUTURE\n\r\n\n \n\n\n\n\xA9 Copyright 2024  \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3246,9 +3245,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " \n\nJAM 2024\n\r\n\r\nLorem Ipsum\n\n\r\nLorem Ipsum\n\n\r\nLorem Ipsum\n\n\r\nLorem
-    Ipsum\n\n\r\nLorem Ipsum\n\r\n\r\nLorem Ipsum\n\nLorem Ipsum\n\n\nLorem Ipsum\n\nLorem
-    Ipsum\nLorem Ipsum\n\n\nLorem Ipsum\n\nLorem Ipsum\n\n\n\n"
+  m_text: " \n\nJAM 2024\n\r\n\r\nKaizer Contreras\n\nJaden\n\n\r\nJaden\n\nPatrice
+    de-SOUZA\n\nKaizer Contreras\n\n\rHananeh khadem\n\r\n\rJosephine Patio\n\nChristopher
+    Kerr\n\nAnthony Spiritoso\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3396,7 +3395,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Thanks for playing \"Lost Fortunes\" !\r"
+  m_text: "Thanks for playing \"FORTUNES LAST FUTURE\" !\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3485,9 +3484,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n\nCLIMATE FUTURE \n\r\n\r\nGame Concept :\r\n\n\r\nGame Design  :\r\n\n\r\nProgramming
-    :\r\n\n\r\nArt and VFX :\n\n\nMusic and SFX :\n\n\nLorem Ipsum :\r\n\n\n\n\r\nSpecial
-    Thanks:\r\n\r\n\n\n\n\nPour toute question, commentaire ou assistance :\r\n\n\n\n\n"
+  m_text: "\n\nCLIMATE FUTURE \n\r\n\r\nGame Design  :\r\n\n\r\n\n\nProgramming :\r\n\n\r\n\n3D
+    Art  :\n\nUI Design :\n\nVFX :\n\nMusic :\n\nSFX / Sound Design :\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3584,7 +3582,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e9250e35d382a91409277653e19f2f8e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b311440241cb8b54b9c7c0dd7e4b54d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
