@@ -38,5 +38,12 @@ public class Ally : Unit
 		
 	}
 
+	// Could we attack the unit on this tile?
+	public override bool GetValidAttackTarget(Tile tile) {
+		//TODO 
+
+		return false;
+	}
+
 
 }

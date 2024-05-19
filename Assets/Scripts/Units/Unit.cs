@@ -5,22 +5,38 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour, ITurnTaker
 {
+	public Board board;
+	public VisualUnit visualUnit;
 
-    [SerializeField] List<Action> actions;
+
+	[System.Serializable]
+	public struct UnitTags {
+		bool player; 
+		bool enemy;
+	}
+	public UnitTags tags;
+
+
+    [SerializeField] List<Attack> attacks;
 
 	[SerializeField] int hpMax = 1;
 	[SerializeField] int hp;
 
 
-	public Tile.TileProperties canBePlacedOn;	// Valid tiles when placing this unit.
 	public Tile.TileProperties canStandOn; 		// Tiles this unit can end a turn on, tiles considered valid to end a move on.
-	public Tile.TileProperties canPassThrough;  // Tiles considered valid when moving.
+
+	// not using these for simplicity
+	//public Tile.TileProperties canPassThrough;  // Tiles considered valid when moving.
+	//public Tile.TileProperties canBePlacedOn;	// Valid tiles when placing this unit. 
+
 
 	public bool hasMovedThisTurn = false;
+	public bool hasCollectedEnergyThisTurn = false;
+	public bool hasAttackedThisTurn = false;
 	[SerializeField] int actionsPerTurn = 1;
 	public int actionsRemaining;
 
-	VisualUnit visualUnit;
+	
 
     // Start is called before the first frame update
     void Start()
@@ -109,15 +125,6 @@ public class Unit : MonoBehaviour, ITurnTaker
 		return tilesInRange;
 	}
 
-
-	// Returns a list of tiles this unit can attack, if valid. Implementation based on type.
-	public virtual List<Tile> GetAttackRange() {
-
-		//TODO 
-
-		return null;
-
-	}
 
 	// Could we attack the unit on this tile?
 	public virtual bool GetValidAttackTarget(Tile tile) {

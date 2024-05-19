@@ -13,18 +13,6 @@ public class Action : MonoBehaviour
 
 	public int energyRequired = 1;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
 	// Do the thing 
 	public virtual void PerformAction() {
