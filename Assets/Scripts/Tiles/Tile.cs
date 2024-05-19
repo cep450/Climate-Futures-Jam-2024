@@ -25,7 +25,7 @@ public class Tile : MonoBehaviour
 
 	Unit unit = null;
 
-	public float smog = 0f; 
+	//public float smog = 0f; 
 	public float sunlight= 1f;
 
 	public bool GetCloudCover() {

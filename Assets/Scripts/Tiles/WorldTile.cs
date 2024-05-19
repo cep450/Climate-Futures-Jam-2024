@@ -9,11 +9,11 @@ public class WorldTile : MonoBehaviour
 	*/
 
 	//positions for different parts/layers
-	[SerializeField] GameObject land, unit, smog, cloud;
+	[SerializeField] GameObject land, unit, cloud; //smog;
 
-	public float heightOffset = 0;
-	public Vector3 rotation = Vector3.zero;
-	public bool clouds = false;
+	//public float heightOffset = 0;
+	//public Vector3 rotation = Vector3.zero;
+	//public bool clouds = false;
 
 	public Tile tile;
 
