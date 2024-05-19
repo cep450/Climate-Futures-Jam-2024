@@ -6,6 +6,7 @@ using UnityEngine;
 public class Unit : MonoBehaviour, ITurnTaker
 {
 	public Board board;
+	public Vector2Int gridPosition;
 	public VisualUnit visualUnit;
 
 
