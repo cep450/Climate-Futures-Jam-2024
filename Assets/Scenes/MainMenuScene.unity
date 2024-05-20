@@ -2554,7 +2554,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e205886344b78504aa109969060c2678, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8356fc20d5e66d4ea4cbff3c1d52a20, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3510,7 +3510,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: " \n\nJAM 2024\n\r\n\r\nKaizer Contreras\n\nJaden\n\n\r\nJaden\n\nPatrice
     de-SOUZA\n\nKaizer Contreras\n\n\rHananeh khadem\n\r\n\rJosephine Patio\n\nChristopher
-    Kerr\n\nAnthony Spiritoso\n\n"
+    Kerr\n\nAnthony Spiritoso\n\nOnion\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3748,7 +3748,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\n\nCLIMATE FUTURE \n\r\n\r\nGame Design  :\r\n\n\r\n\n\nProgramming :\r\n\n\r\n\n3D
-    Art  :\n\nUI Design :\n\nVFX :\n\nMusic :\n\nSFX / Sound Design :\n"
+    Art  :\n\nUI Design :\n\nVFX :\n\nMusic :\n\nSFX / Sound Design :\n\nNarrative:\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3845,7 +3845,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b311440241cb8b54b9c7c0dd7e4b54d8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a99ea2a30dd7fb942a33b10468f6e5ce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4065,7 +4065,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: a99ea2a30dd7fb942a33b10468f6e5ce, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
