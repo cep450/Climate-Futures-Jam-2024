@@ -494,7 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.0763617, b: 0.0763617, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -632,14 +632,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "In 2050 a boy born into a world of pollution never knew the joys of running
-    in the sun blight free. \r\nCurrently, the earth\u2019s ecosystems are in a perpetual
-    balancing act. Micro and nano particle pollution drift through the wind, shifting
-    between toxic and fatal doses. \r\nThe tipping point was finally reached in the
-    year 2059. \r\nThis boy, Amad, his parents went to inspect air quality levels
-    around Central America, it was during this time that oil fields were set ablaze
-    in a scorched earth attack, causing those in the local area to perish.\r\n This
-    boy was taken into the custody of his father\u2019s colleague. \r\n"
+  m_text: "In 2059, a hazy vision of a young boy running under a blighted sky. He
+    has never known otherwise. He pauses, hands on knees, panting a little too hard,
+    trying to catch his breath.\r\n\r\nThe earth\u2019s ecosystems are a balancing
+    act - micro- and nano-particulates pollute the breathable atmosphere, drifting
+    through the wind and shifting, suddenly and without warning, between toxic and
+    fatal concentrations.\r\n\r\nCatching his breath as much as he ever would, our
+    young man looks up from his feet to his father. \n\r\nSuddenly, the oil fields
+    before him are ablaze. His father is nowhere to be found. He frantically searches
+    amongst the charred figures, not knowing what he hoped to find\u2026\r\n\r\nThe
+    Year is now 2060\n\nHe stops. Remembers his father\u2019s words from before:
+    \n\r\nFather: \"You will inherit it. You\u2019re strong enough, Amad.\r..\"\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2477,7 +2480,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5540a0a56e4f4ba4990837760a91e6a6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5cd2a521665f35d409d43ffddef4e39d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
