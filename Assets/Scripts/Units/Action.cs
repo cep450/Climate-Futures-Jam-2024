@@ -13,11 +13,21 @@ public class Action : MonoBehaviour
 
 	public int energyRequired = 1;
 
+	Tile targetTile;
 
-	// Do the thing 
-	public virtual void PerformAction() {
+
+	public void ActionSelected() {
 
 	}
+
+
+	// Perform the action 
+	public virtual void PerformAction() {
+
+		
+	}
+
+
 
 
 }

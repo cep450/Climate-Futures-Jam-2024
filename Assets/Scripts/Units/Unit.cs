@@ -12,8 +12,8 @@ public class Unit : MonoBehaviour, ITurnTaker
 
 	[System.Serializable]
 	public struct UnitTags {
-		bool player; 
-		bool enemy;
+		public bool player; 
+		public bool enemy;
 	}
 	public UnitTags tags;
 
@@ -23,8 +23,7 @@ public class Unit : MonoBehaviour, ITurnTaker
 	[SerializeField] int hpMax = 1;
 	[SerializeField] int hp;
 
-
-	public Tile.TileProperties canStandOn; 		// Tiles this unit can end a turn on, tiles considered valid to end a move on.
+	public Tile.TileProperties cannotStandOn; 		// Tiles this unit can end a turn on, tiles considered valid to end a move on.
 
 	// not using these for simplicity
 	//public Tile.TileProperties canPassThrough;  // Tiles considered valid when moving.
@@ -36,6 +35,10 @@ public class Unit : MonoBehaviour, ITurnTaker
 	public bool hasAttackedThisTurn = false;
 	[SerializeField] int actionsPerTurn = 1;
 	public int actionsRemaining;
+
+	public Tile GetTile() {
+		return board.tiles.GetTile(gridPosition);
+	}
 
 	
 
@@ -75,7 +78,13 @@ public class Unit : MonoBehaviour, ITurnTaker
 		//TODO 
 		//any effect or animation we're playing 
 		// remove the unit 
+		RemoveFromBoard();
 		// create scrap on the board where the unit was 
+	}
+
+	public void RemoveFromBoard() {
+		GetTile().unit = null;
+		Destroy(visualUnit);
 	}
 
 	public void BeginTurn() {
@@ -104,11 +113,19 @@ public class Unit : MonoBehaviour, ITurnTaker
 	}
 
 	// Could we move to this tile?
-	public virtual bool GetValidMoveTarget(Tile tile) {
-		//TODO 
-		// all units will want to filter out tiles that already have units
+	public virtual bool IsValidMoveTarget(Tile tile) {
 
-		return false; 
+		// all units will want to filter out tiles that already have units
+		if(tile.unit != null) {
+			return false;
+		}
+
+		// filter out tiles we can't stand on 
+		if(tile.properties.ContainsAny(cannotStandOn)) {
+			return false;
+		}
+
+		return true; 
 	}
 
 	// Returns a list of valid tiles this unit can move to. Used for displaying movement options.
@@ -117,7 +134,7 @@ public class Unit : MonoBehaviour, ITurnTaker
 		List<Tile> tilesInRange = GetMovementRange();
 		//check validity
 		for(int i = 0; i < tilesInRange.Count; i++) {
-			bool valid = GetValidMoveTarget(tilesInRange[i]);
+			bool valid = IsValidMoveTarget(tilesInRange[i]);
 			if(!valid) {
 				tilesInRange.RemoveAt(i);
 				i--;
@@ -133,6 +150,8 @@ public class Unit : MonoBehaviour, ITurnTaker
 
 		return false;
 	}
+
+	
 
 	
 }
